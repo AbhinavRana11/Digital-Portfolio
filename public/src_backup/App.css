@@ -1,0 +1,33 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem !important;
+  }
+  
+  .navbar ul {
+    display: none !important; /* Simple mobile toggle could be added later */
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}

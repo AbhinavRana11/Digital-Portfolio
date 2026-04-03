@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhinav Rana | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root">
+      <h2 style="color: white; padding: 50px; text-align: center;">Heartbeat: Site Loading...</h2>
+    </div>
+    <script>
+      window.onerror = function(msg, url, line, col, error) {
+        document.body.style.backgroundColor = "white";
+        document.body.innerHTML = '<div style="color: red; padding: 20px; font-family: monospace;"><h1>ERROR REACHED BROWSER:</h1><p>' + msg + '</p><pre>' + (error ? error.stack : "") + '</pre></div>';
+      };
+      console.log("Heartbeat active");
+    </script>
+    <script>
+      window.onerror = function(msg, url, line, col, error) {
+        document.body.style.backgroundColor = "white";
+        document.body.innerHTML = '<div style="color: red; padding: 20px; font-family: monospace;"><h1>CRITICAL ERROR:</h1><p>' + msg + '</p><p>Line: ' + line + ', Col: ' + col + '</p><pre>' + (error ? error.stack : "") + '</pre></div>';
+      };
+      console.log("Runtime monitor active");
+    </script>
+
+    <!-- ✅ THIS IS IMPORTANT -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

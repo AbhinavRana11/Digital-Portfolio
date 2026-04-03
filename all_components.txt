@@ -1,0 +1,679 @@
+﻿import React from 'react';
+
+const About = () => {
+  return (
+    <section id="about" className="about-section reveal">
+      <div className="container">
+        <h2 className="gradient-text" style={{ marginBottom: '4rem' }}>About Me</h2>
+        
+        <div className="about-premium-grid stagger-reveal">
+          {/* Left Column: Sidecards */}
+          <div className="about-side-column">
+            <div className="side-card bg-glass">
+              <h3 className="side-card-title">Quick Facts</h3>
+              <div className="fact-item">
+                <div className="fact-icon">ðŸ“</div>
+                <div className="fact-info">
+                  <span className="fact-label">Location</span>
+                  <span className="fact-value">Punjab, India</span>
+                </div>
+              </div>
+              <div className="fact-item">
+                <div className="fact-icon">ðŸŽ“</div>
+                <div className="fact-info">
+                  <span className="fact-label">Education</span>
+                  <span className="fact-value">Pursuing B.Tech in CSE</span>
+                </div>
+              </div>
+              <div className="fact-item">
+                <div className="fact-icon">ðŸ’¼</div>
+                <div className="fact-info">
+                  <span className="fact-label">Experience</span>
+                  <span className="fact-value">Final Year Student</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="side-card bg-glass" style={{ marginTop: '2rem' }}>
+              <h3 className="side-card-title">When I'm Not Coding</h3>
+              <div className="hobby-item">
+                <span className="hobby-icon">ðŸ’»</span>
+                <span className="hobby-name">Surfing Web</span>
+              </div>
+              <div className="hobby-item">
+                <span className="hobby-icon">ðŸ“š</span>
+                <span className="hobby-name">Reading</span>
+              </div>
+              <div className="hobby-item">
+                <span className="hobby-icon">ðŸŽµ</span>
+                <span className="hobby-name">Music</span>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Right Column: Main Content */}
+          <div className="about-main-column">
+            <div className="about-card bg-glass">
+              <h3 className="gradient-text" style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>My Journey</h3>
+              <p>
+                Hello! I'm <strong className="text-accent">Abhinav Rana</strong>, a Computer Science student at Lovely Professional University with a strong interest in technology and data-driven solutions.
+              </p>
+              <p>
+                My journey into programming started in my first year of college, where curiosity pushed me to explore different programming languages and development tools. Since then, Iâ€™ve been learning and building projects using <strong>React, Node.js, JavaScript, and modern cloud infrastructure</strong>.
+              </p>
+              <p>
+                What drives me is the intersection of technology and creativityâ€”finding that perfect balance between functional code and intuitive design. I'm constantly expanding my skills through hands-on projects and keeping up with emerging technologies.
+              </p>
+              
+              <div style={{ marginTop: '2.5rem', display: 'flex', alignItems: 'center' }}>
+                <a 
+                  href="/resume.jpg" 
+                  className="btn btn-primary" 
+                  download 
+                  style={{ 
+                    padding: '1rem 2.5rem',
+                    fontSize: '1.05rem',
+                    fontWeight: '700',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.75rem',
+                    boxShadow: '0 10px 30px rgba(0, 210, 255, 0.2)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)'
+                  }}
+                >
+                  <span style={{ fontSize: '1.25rem' }}>ðŸ“„</span> 
+                  Download Resume
+                </a>
+              </div>
+            </div>
+
+            <div className="about-card bg-glass" style={{ marginTop: '2rem' }}>
+              <h3 className="gradient-text" style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>My Approach</h3>
+              <p>
+                I believe in creating technology that's not just functional but <strong className="text-accent">meaningful</strong>. Every line of code I write aims to solve real problems and deliver seamless user experiences.
+              </p>
+              <p>
+                I am passionate about continuous learning, problem solving, and exploring new technologies, which motivates me to grow as a developer every day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
+import React from 'react';
+
+const Achievements = () => {
+  const achievements = [
+    {
+      icon: 'ðŸ”¥',
+      title: '50-Day Streak on LeetCode',
+      date: 'April 2025',
+      desc: 'Maintained a 50-day daily problem-solving streak on LeetCode, showcasing consistency and dedication.'
+    },
+    {
+      icon: 'ðŸ’¡',
+      title: '150 LeetCode Questions Solved',
+      date: 'April 2025',
+      desc: 'Solved 150 coding questions on LeetCode in April 2025, strengthening problem-solving and algorithmic thinking.'
+    },
+    {
+      icon: 'ðŸŒ±',
+      title: '100+ GeeksForGeeks Problems',
+      date: '2025',
+      desc: 'Successfully solved over 100 data structures and algorithms problems on the GeeksForGeeks platform, building strong foundational skills.'
+    }
+  ];
+
+  return (
+    <section id="achievements">
+      <div className="container">
+        <h2 className="gradient-text" style={{ marginBottom: '3rem' }}>Achievements</h2>
+        <div className="achievements-grid">
+          {achievements.map((item, index) => (
+            <div key={index} className="achievement-card bg-glass">
+              <div className="achievement-icon">{item.icon}</div>
+              <div className="achievement-info">
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                  <h3>{item.title}</h3>
+                  <span className="achievement-date">{item.date}</span>
+                </div>
+                <p>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Achievements;
+import React from 'react';
+
+const Certificates = () => {
+  const certs = [
+    { 
+      title: 'Foundations: Data, Data, Everywhere', 
+      issuer: 'Coursera', 
+      date: 'Mar 2026',
+      badge: 'Coursera',
+      image: '/Google certificate (3).png',
+      description: 'Comprehensive overview of data analysis practices, tools, and the data lifecycle to make data-driven decisions.',
+      link: 'https://www.coursera.org/account/accomplishments/certificate/XW71OCJ4J7CZ'
+    },
+    { 
+      title: 'Android Developer Pro', 
+      issuer: 'Lovely Professional University', 
+      date: 'Jul 2025',
+      badge: 'LPU',
+      image: '/android-certificate.png',
+      description: 'Hands-on practical training for building Android mobile applications from scratch and publishing to the Play Store.',
+      link: '/android-certificate.png'
+    },
+    { 
+      title: 'Responsive Web Design', 
+      issuer: 'freeCodeCamp', 
+      date: 'Nov 2023',
+      badge: 'freeCodeCamp',
+      image: '/cert-fcc.png',
+      description: 'Developer Certification covering HTML5, modern CSS techniques, flexbox, grid, and accessibility standards.',
+      link: 'https://freecodecamp.org/certification/fcc4ff8a2d7-2d48-4d4c-9187-0df0faff4822/responsive-web-design'
+    }
+  ];
+
+  return (
+    <section id="certificates" className="reveal">
+      <div className="container">
+        <h2 className="gradient-text" style={{ marginBottom: '3rem' }}>My Certificates</h2>
+        <div className="stagger-reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+          {certs.map((c, i) => (
+            <a href={c.link} target="_blank" rel="noopener noreferrer" key={i} className="cert-card" style={{ textDecoration: 'none' }}>
+              <div className="cert-image-wrapper">
+                <span className="cert-badge">{c.badge}</span>
+                <img 
+                  src={c.image} 
+                  alt={c.title} 
+                />
+                <div className="cert-date-overlay">{c.date}</div>
+              </div>
+              <div className="cert-content">
+                <h3>{c.title}</h3>
+                <p className="cert-desc">{c.description}</p>
+                <div className="cert-footer">
+                  <span>{c.issuer}</span>
+                  <span>{c.date}</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Certificates;
+import React from 'react';
+
+const Contact = () => {
+  return (
+    <section id="contact" style={{ textAlign: 'center' }}>
+      <h2>Let's <span className="text-accent">Connect</span></h2>
+      <p style={{ margin: '0 auto 2.5rem' }}>
+        I'm always open to discussing new projects, creative ideas, or 
+        opportunities to be part of your vision.
+      </p>
+      <div className="bg-glass" style={{ 
+        maxWidth: '600px', 
+        margin: '0 auto', 
+        padding: '3rem', 
+        borderRadius: '24px' 
+      }}>
+        <h3 style={{ marginBottom: '1rem' }}>Interested in working together?</h3>
+        <p style={{ marginBottom: '2rem' }}>Drop me an email or find me on social media.</p>
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+          <a href="mailto:hello@example.com" className="btn btn-primary">Send Email</a>
+          <a href="#" className="btn btn-outline">LinkedIn</a>
+          <a href="#" className="btn btn-outline">GitHub</a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
+import React from 'react';
+import { GraduationCap } from 'lucide-react';
+
+const Education = () => {
+  return (
+    <section id="education" className="education-section reveal" style={{ paddingTop: '6rem', paddingBottom: '4rem' }}>
+      <div className="container">
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <h2 className="institute-name" style={{ fontSize: '3rem', marginBottom: '1rem', letterSpacing: '1px' }}>Academic Journey</h2>
+          <p style={{ color: '#ccc', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto', lineHeight: '1.6' }}>
+            A concise view of my academic background, learning foundation, and consistent performance over the years.
+          </p>
+        </div>
+
+        <div className="center-timeline-container reveal-active">
+
+          <div className="center-timeline-item">
+            <div className="center-timeline-icon">
+              <GraduationCap size={20} />
+            </div>
+            <div className="center-timeline-content">
+              <span className="timeline-date-top">Since August 2023</span>
+              <h3 className="institute-name">Lovely Professional University</h3>
+              <p className="course-degree">Bachelor of Technology - Computer Science and Engineering</p>
+              <div className="badge-container">
+                <div className="info-badge">ðŸ“ Punjab, India</div>
+                <div className="info-badge"><span>CGPA:</span> 6.3</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="center-timeline-item" style={{ marginTop: '-4rem' }}>
+            <div className="center-timeline-icon">
+              <GraduationCap size={20} />
+            </div>
+            <div className="center-timeline-content">
+              <span className="timeline-date-top">April 2021 - March 2022</span>
+              <h3 className="institute-name">Himalayan Public Ser. Sec. School</h3>
+              <p className="course-degree">Intermediate</p>
+              <div className="badge-container">
+                <div className="info-badge">ðŸ“ Himachal Pradesh</div>
+                <div className="info-badge"><span>Percentage:</span> 85.30%</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="center-timeline-item" style={{ marginTop: '-4rem' }}>
+            <div className="center-timeline-icon">
+              <GraduationCap size={20} />
+            </div>
+            <div className="center-timeline-content">
+              <span className="timeline-date-top">April 2019 - March 2020</span>
+              <h3 className="institute-name">Himalayan Public Ser. Sec. School</h3>
+              <p className="course-degree">Matriculation</p>
+              <div className="badge-container">
+                <div className="info-badge">ðŸ“ Himachal Pradesh</div>
+                <div className="info-badge"><span>Percentage:</span> 78.60%</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Education;
+import React, { useState, useEffect } from 'react';
+
+const Hero = () => {
+  const [text, setText] = useState('');
+  const fullText = 'Data Scientist';
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < fullText.length) {
+      const timeout = setTimeout(() => {
+        setText(prev => prev + fullText[index]);
+        setIndex(prev => prev + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    }
+  }, [index, fullText]);
+
+  const tags = ['C++', 'Java', 'C', 'Python', 'HTML', 'CSS', 'JavaScript'];
+
+  return (
+    <section id="home" className="hero-section">
+      <div className="hero-container">
+        <div className="hero-content">
+          <h1 className="gradient-text hero-name" style={{ marginBottom: '1rem', fontSize: '4.5rem' }}>
+            Abhinav Rana
+          </h1>
+          <h2 className="typing-container" style={{ marginBottom: '1.5rem', fontSize: '2.5rem' }}>
+            {text}<span className="cursor">|</span>
+          </h2>
+          <p className="hero-description" style={{ marginBottom: '2rem', fontSize: '1.2rem', color: 'var(--text-secondary)' }}>
+            Computer Science student at Lovely Professional University with a strong interest in technology and data-driven solutions.
+          </p>
+          
+          <div className="hero-tags" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '3rem' }}>
+            {tags.map((tag, i) => (
+              <span key={i} className="hero-tag">{tag}</span>
+            ))}
+          </div>
+
+          <div style={{ display: 'flex', gap: '1.5rem' }}>
+            <a href="/resume.jpg" target="_blank" rel="noopener noreferrer" className="btn btn-primary hero-btn">View CV</a>
+            <a href="/resume.jpg" download className="btn btn-outline hero-btn">Download CV</a>
+          </div>
+        </div>
+        <div className="hero-image">
+          <div className="profile-img-container">
+            <img src="/profile.jpg" alt="Abhinav Profile" className="profile-img" />
+            <div className="profile-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
+import React from 'react';
+
+const Navbar = () => {
+  return (
+    <nav className="navbar bg-glass" style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 1000,
+      padding: '1rem 2rem',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center'
+    }}>
+      <div className="logo" style={{ fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.05em' }}>
+        ABHINAV<span className="text-accent">.</span>
+      </div>
+      <ul style={{ display: 'flex', gap: '1rem', listStyle: 'none', fontSize: '0.8rem', flexWrap: 'wrap' }}>
+        <li><a href="#hero" className="nav-link">Home</a></li>
+        <li><a href="#about" className="nav-link">About</a></li>
+        <li><a href="#education" className="nav-link">Education</a></li>
+        <li><a href="#projects" className="nav-link">Projects</a></li>
+        <li><a href="#skills" className="nav-link">Skills</a></li>
+        <li><a href="#certificates" className="nav-link">Certificates</a></li>
+        <li><a href="#achievements" className="nav-link">Achievements</a></li>
+        <li><a href="#resume" className="nav-link">Resume</a></li>
+      </ul>
+      <a href="#contact" className="btn btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}>Let's Talk</a>
+    </nav>
+  );
+};
+
+export default Navbar;
+import React, { useEffect, useRef } from 'react';
+
+const ParticlesBackground = () => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    let animationFrameId;
+
+    const setCanvasSize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    
+    setCanvasSize();
+    window.addEventListener('resize', setCanvasSize);
+
+    const particles = [];
+    const particleCount = 80;
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        this.radius = 3;
+      }
+
+      update() {
+        // Bounce off edges
+        if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
+        if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+        
+        this.x += this.vx;
+        this.y += this.vy;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0, 212, 255, 0.5)';
+        ctx.fill();
+        ctx.closePath();
+      }
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new Particle());
+    }
+
+    let mouse = { x: null, y: null };
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    });
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < particleCount; i++) {
+        particles[i].update();
+        particles[i].draw();
+
+        // Repulse effect on hover matching tsparticles config
+        if (mouse.x && mouse.y) {
+          const dxMouse = particles[i].x - mouse.x;
+          const dyMouse = particles[i].y - mouse.y;
+          const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
+          if (distMouse < 120) {
+            particles[i].x += dxMouse * 0.03;
+            particles[i].y += dyMouse * 0.03;
+          }
+        }
+
+        // Connect lines
+        for (let j = i; j < particleCount; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 150) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(0, 212, 255, ${0.4 * (1 - distance / 150)})`;
+            ctx.lineWidth = 1;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+            ctx.closePath();
+          }
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', setCanvasSize);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        zIndex: -1,
+        background: '#0a0e17'
+      }}
+    />
+  );
+};
+
+export default ParticlesBackground;
+import React from 'react';
+
+const Projects = () => {
+  const projectList = [
+    { 
+      title: 'Food Ordering Website', 
+      tag: 'Full-Stack',
+      desc: 'A premium, responsive digital marketplace for food ordering with real-time tracking and seamless UI.',
+      tech: ['React', 'Node.js', 'MongoDB'],
+      links: { demo: '#', code: '#' }
+    },
+    { 
+      title: 'Road Accident Analyzer', 
+      tag: 'Featured',
+      desc: 'A data-driven solution to analyze road accidents and identify patterns to improve safety.',
+      tech: ['Python', 'Data Analysis'],
+      links: { demo: '#', code: '#' }
+    },
+    { 
+      title: 'Hospital Management System', 
+      tag: 'Desktop App',
+      desc: 'A comprehensive system for managing hospital operations, patient records, and billing.',
+      tech: ['Java', 'Swing', 'MySQL'],
+      links: { demo: '#', code: '#' }
+    }
+  ];
+
+  return (
+    <section id="projects" className="projects-section reveal">
+      <div className="container">
+        <h2 className="gradient-text" style={{ fontSize: '3rem' }}>Featured Projects</h2>
+        <div className="projects-grid stagger-reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem', marginTop: '3rem' }}>
+          {projectList.map((p, i) => (
+            <div key={i} className="bg-glass project-card" style={{ padding: '2.5rem', borderRadius: '16px', position: 'relative' }}>
+              <span className="project-tag">{p.tag}</span>
+              <h3 style={{ margin: '1rem 0', fontSize: '1.5rem' }}>{p.title}</h3>
+              <p style={{ marginBottom: '1.5rem', fontSize: '1rem' }}>{p.desc}</p>
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+                {p.tech.map((t, ti) => (
+                  <span key={ti} className="tech-badge">{t}</span>
+                ))}
+              </div>
+              <div style={{ display: 'flex', gap: '1.5rem' }}>
+                <a href={p.links.demo} className="text-accent" style={{ fontWeight: 600, fontSize: '0.9rem' }}>Live Demo â†—</a>
+                <a href={p.links.code} className="text-accent" style={{ fontWeight: 600, fontSize: '0.9rem' }}>Source Code â†—</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
+import React from 'react';
+
+const Skills = () => {
+  const treeData = [
+    {
+      name: 'Programming Languages',
+      children: [
+        { name: 'C++' },
+        { name: 'Python' },
+        { name: 'Java' },
+        { name: 'JavaScript' },
+        { name: 'SQL' }
+      ]
+    },
+    {
+      name: 'Data Analytics',
+      children: [
+        { name: 'Pandas' },
+        { name: 'NumPy' },
+        { name: 'Matplotlib', children: [{ name: 'Power BI' }] },
+        { name: 'Seaborn' },
+        { name: 'Scikit-Learn' }
+      ]
+    },
+    {
+      name: 'Web Development',
+      children: [
+        { name: 'React.js' },
+        { name: 'Node.js' },
+        { name: 'Express.js' },
+        { name: 'MongoDB' }
+      ]
+    },
+    {
+      name: 'DevOps & Tools',
+      children: [
+        { name: 'Docker' },
+        { name: 'Git & GitHub', children: [{ name: 'JWT Authentication' }] },
+        { name: 'Linux' },
+        { name: 'REST APIs' }
+      ]
+    }
+  ];
+
+  return (
+    <section id="skills" className="skills-section reveal">
+      <div className="container" style={{ textAlign: 'center' }}>
+        <div style={{ width: '100%', marginBottom: '3rem' }}>
+          <h2 className="gradient-text" style={{ fontSize: '3.5rem', margin: 0 }}>My Skills</h2>
+        </div>
+        
+        <div className="tech-root-node stagger-reveal">Tech</div>
+        
+        <div className="skills-grid-container stagger-reveal">
+          {treeData.map((category, index) => (
+            <div className="tree category-tree" key={index}>
+              <ul>
+                <li>
+                  <div className="tree-node category-node">
+                    <div className="title">{category.name}</div>
+                  </div>
+                  <ul>
+                    {category.children.map((skill, sIndex) => (
+                      <li key={sIndex}>
+                        <div className="tree-node skill-node">
+                          <div className="title">{skill.name}</div>
+                        </div>
+                        {skill.children && (
+                          <ul>
+                            {skill.children.map((subSkill, subIndex) => (
+                              <li key={subIndex}>
+                                <div className="tree-node skill-node sub-skill-node">
+                                  <div className="title">{subSkill.name}</div>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Skills;
